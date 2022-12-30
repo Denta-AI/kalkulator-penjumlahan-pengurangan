@@ -4,25 +4,43 @@
 	num2 db 0
 	choice db 0
 
-	printd db'------------'
-		 db'$'
-	printe db'1.	Penjumlahan'
-		 db'$'
-	printf db'2.	Pengurangan'
-		 db'$'
-	printi db'------------'
-		 db'$'
-	printj db'Pilih nomor operasi aritmatika: '
-		 db'$'
-	msg6 db 'Input bilangan pertama :$'
-	msg7 db 'Input bilangan kedua :$'
-	msg8 db 'Hasilnya adalah :$'
-	printy db'------------'
-		 db'$'
+	printa db'Kalkulator! $'
+	printb db'Selamat datang di kalkulator simple, penjumlahan dan pengurangan by Denta-ai $'
+	printd db'------------ $'
+	printe db'1.	Penjumlahan $'
+	printf db'2.	Pengurangan $'
+	printi db'------------ $'
+	printj db'Pilih nomor operasi aritmatika :$'
+	msg6 db 'Input bilangan pertama $'
+	msg7 db 'Input bilangan kedua $'
+	msg8 db 'Hasilnya adalah $'
+	printy db'------------ $'
 .code
 org 100h
 
 start:
+	mov dl,10		;spasi
+	mov ah,02h
+	int 21h
+	mov dl,13
+	mov ah,02h
+	int 21h
+
+	mov ah,09h
+	mov dx,offset printa
+	int 21h
+
+	mov dl,10		;spasi
+	mov ah,02h
+	int 21h
+	mov dl,13
+	mov ah,02h
+	int 21h
+
+	mov ah,09h
+	mov dx,offset printb
+	int 21h
+
 	mov dl,10		;spasi
 	mov ah,02h
 	int 21h
