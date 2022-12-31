@@ -113,7 +113,7 @@ start:
 	cmp choice,2
 	je pengurangan
 	
-	jmp exit
+	jmp start
 
 	;KODE PROGRAM OPERASI
 
